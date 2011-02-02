@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="css/facelist.css" type="text/css" media="screen" title="Facelist" charset="utf-8" />
+<!--[if IE]>
+<link href="css/facelist_ie.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<script type="text/javascript" src="javascript/jquery-1.2.6.min.js"></script>
+<script type="text/javascript" src="javascript/jquery.autocomplete.js"></script>
+<script type="text/javascript" src="javascript/jquery.facelist.js"></script>
+<script type="text/javascript" charset="utf-8">
+	$(document).ready(function() { 
+	
+		var arr_users = ["Abramovich", "Abrahamowicz", "Abramowicz", "Akerman", "Akkerman", "Akman", "Eykerman", "Aikhgorin", "Aizenberg", "Ayzenberg", "Aksalbinder", "Akselbind", "Akselband", "Akselrod", "Akselrud", "Aksman", "Oksman", "Anshin", "Anshine", "Apokorin", "Arbetman", "Aronovich", "Aronowicz", "Asnis", "Averbukh", "Averbakh", "Balagor", "Barats", "Barits", "Barenfeld", "Barinberg", "Barondess", "Bas", "Basin", "Basisty", "Bashkov", "Beker", "Bekman", "Bekerman", "Berdichevski", "Berdichevsky", "Berenshteyn", "Bershteyn", "Burshteyn", "Berenzon", "Berzon", "Berez", "Berets", "Berger", "Berg", "Bergman", "Berkovich", "Berlyand", "Berland", "Berman", "Burman", "Beygeldrut", "Bezborodky", "Bezborodko", "Bik", "Biletsker", "Biletskiy", "Bilik", "Billig", "Bilokamen", "Blekhman", "Bleikhman", "Bleter", "Bleyvas", "Blinder", "Blumenfeld", "Bokserboym", "Brand", "Brandman", "Brind", "Bresler", "Brezman", "Brener", "Brenner", "Brill", "Brodsky", "Broitman", "Broytman", "Bronshteyn", "Bukhbinder", "Cherniy", "Dekhtyar", "Derevitsky", "Derevicher", "Derevsky", "Diamant", "Diment", "Dinets", "Dinisman", "Dobstis", "Dodik", "Dodek", "Dorbarminiker", "Dorfman", "Dukhovnay", "Duvidovich", "Eydelman", "Eidelman", "Eydelshteyn", "Einhorn", "Ekht", "Gekht", "Epelboym", "Faerman", "Faershteyn", "Falikovich", "Farber", "Ferber", "Fasman", "Faser", "Faynman", "Faynshteyn", "Feynshteyn", "Feldberg", "Feldman", "Feldshteyn", "Feler", "Filer", "Felgendler", "Felman", "Ferman", "Feter", "Fiks", "Fikh", "Finger", "Finkel", "Finkelshteyn", "Fisgeer", "Fishbeyn", "Fishboyn", "Fishel", "Fishgal", "Fishman", "Fleyderman", "Fliman", "Flit", "Fleysh", "Fleyshman", "Fleysher", "Flomenfeld", "Frayman", "Frenkel", "Frinkel", "Freydzon", "Frizon", "Fridman", "Froyman", "Froiman", "Fudim", "Fudish", "Fukelman", "Fuks", "Gaba", "Gabai", "Gabay", "Gapay", "Galay", "Galbershtut", "Galer", "Galerman", "Galperin", "Galperson" ];
+		
+		$("#list_user").autocomplete("search.php", properties = { 
+													matchContains: true,
+													minChars: 2,
+													selectFirst: false, 
+													intro_text: "Type Name", 
+													no_result: "No Names"
+												}); 
+						$("#submit").click(function(){
+						var data = $("#to_users").val()
+							alert(data)
+						})
+	});
+</script>
+<title>Facelist</title>
+</head>
+<body>
+	<form action="index.html" method="post">
+		<ul class="facelist">
+			<li class="token-input"><input class="maininput" id="list_user" type="text" /></li>
+		</ul>
+		<div id="result_list" style="display:none;"></div>
+        <input type="submit" id="submit" value="Post" />
+    </form>
+</body>	
+
+</html>

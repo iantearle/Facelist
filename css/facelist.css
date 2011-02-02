@@ -1,0 +1,102 @@
+body{
+	margin: 0;
+	font: 62.5%/1.6em "lucida grande", tahoma, verdana, arial, sans-serif;
+}
+
+/* TextboxList sample CSS */
+ul.facelist {
+	list-style: none; 
+	margin: 0; 
+	border: 1px solid #999; 
+	overflow: hidden; 
+	height: auto !important; 
+	height: 1%; 
+	padding: 4px 5px 0; 
+	width: 512px;
+}
+ul.facelist li { 
+	float: left; 
+	margin: 0 5px 4px 0; 
+}
+ul.facelist li.token-input input { 
+	width: 150px; 
+	margin: 0; 
+	border: 1px solid #FFF; 
+	outline: 0; 
+	padding: 3px 0 2px; 
+} /* no left/right padding here please */
+
+ul.facelist li.token-input { 
+	margin: 0; 
+	width: 5px;
+}
+.token{
+color:black;
+position: relative;
+background-color: #eff2f7;
+border: solid 1px #ccd5e4;
+-moz-border-radius: 3px;
+-webkit-border-radius: 3px;
+border-radius: 3px;
+-webkit-transition: background-color .2s ease-in;
+cursor: pointer;
+padding:2px 20px 2px 5px;
+}
+.tokenhover,
+.token:hover{
+position: relative;
+background-color: #d8dfea;
+border: solid 1px #ccd5e4;
+}
+.token_selected:hover,
+.token_selected{
+color:#fff;
+background-color: #5670a6;
+border: solid 1px #3b5998;
+}
+
+.token span.x,
+.token span.x_hover,
+.tokenhover span.x,
+.tokenhover span.x_hover{background-image:url('../images/token_x.gif');background-position:4px 2px;cursor:pointer;display:inline;padding:0px 6px 0px 5px; width: 10px; display: block; position:absolute; right: 0px; top: 3.5px;text-indent: -9999px}
+
+
+
+/* Autocompleter */
+
+#result_list { 
+	position: absolute; 
+	width: 524px; 
+}
+#result_list .default { 
+	padding: 5px 7px; 
+	border: 1px solid #ccc; 
+	border-width: 0 1px 1px; 
+	background: #eee;
+}
+#result_list ul {  
+	margin: 0; 
+	padding: 0; 
+	background: #fff;
+}
+#result_list ul li { 
+	padding: 5px 12px; 
+	margin: 0; 
+	list-style-type: none; 
+	border: 0px solid #ccc; 
+	border-width: 0 1px 1px; 
+	font: 11px "Lucida Grande", "Verdana"; 
+}
+#result_list ul li em { 
+	font-weight: bold; 
+	font-style: normal; 
+	background: #dae1eb;  
+	color: #000;
+}
+#result_list ul li.auto-focus { 
+	background: #3b5998; 
+	color: #fff; 
+}
+#result_list ul li.auto-focus em { 
+	background: none; 
+}
