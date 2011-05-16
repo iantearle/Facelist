@@ -31,3 +31,25 @@ You can define a URI for the data:
 An example of the PHP used for an AJAX call to a script on your site can be made like so:
 
 	$input = $_GET["q"]; $data = array(); $query = mysql_query("SELECT * FROM table WHERE field LIKE '%$input%'"); while ($row = mysql_fetch_assoc($query)) { $json = array(); $json['value'] = $row['id']; $json['name'] = $row['username']; $json['image'] = $row['user_photo']; $data[] = $json; } header("Content-type: application/json"); echo json_encode($data);
+
+### MIT License
+
+Copyright (c) 2011 Ian Tearle
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
